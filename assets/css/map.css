@@ -1,0 +1,67 @@
+button {
+    font-size: 20px;
+    padding: 10px 20px;
+    margin-top: 20px;
+    background-color: rgb(29, 40, 93);
+    border: none;
+    color: white;
+    border-radius: 30px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    margin-left: 30px;
+  }
+
+  #signout_button{
+    font-size: 20px;
+    padding: 10px 20px;
+    margin-top: 20px;
+    background-color: rgb(29, 40, 93);
+    border: none;
+    color: white;
+    border-radius: 30px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    margin-left: 10px;
+  }
+
+  body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  #authorize_button {
+    margin-right: 8px;
+  }
+  #loading_spinner {
+    display: none;
+    margin: 16px auto;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 5px solid #ccc;
+    border-top-color: #4285f4;
+    animation: spin 1s ease-in-out infinite;
+  }
+  #content {
+    margin: 16px;
+    padding: 16px;
+    background-color:rgb(213 213 213);
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  #container {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #da4f0f;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+  }
+  
