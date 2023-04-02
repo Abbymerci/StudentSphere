@@ -3,7 +3,7 @@ Parse.serverURL = 'https://parseapi.back4app.com/';
 var Pet = Parse.Object.extend("UserData");
 const ourdiv = document.getElementById("Render");
 
-async function render(CName,CCode){
+async function render(CName,CCode,credits,grade, SemYr){
     var CardRender = `<div class="col-lg-4 col-md-6">
                         <div class="card card-chart">
                             <div class="card-header">
@@ -13,7 +13,13 @@ async function render(CName,CCode){
                             <div class="card-body">
                                 <div class="card-footer">
                                     <div class="stats">
-                                        <i class="now-ui-icons ui-2_time-alarm"></i> Last 7 days
+                                        Credits: ${credits}
+                                    </div>
+                                    <div class="stats">
+                                        Overall Grade: ${grade}
+                                    </div>
+                                    <div class="stats">
+                                        Semester: ${SemYr}
                                     </div>
                                 </div>
                             </div>
@@ -22,7 +28,38 @@ async function render(CName,CCode){
     ourdiv.innerHTML += CardRender;
 }
 
-async function readCourses(Coursekey) {
+function gradesfunc(grades,GWeight){
+    var grade = 0;
+    for (var i = 0; i < grades.length; i++) {
+        grade += (( parseInt(grades[i]))/(parseInt(GWeight[i]))) * 100
+        console.log(grade, parseInt(grades[i]), parseInt(GWeight[i]))
+    }
+    return (grade);
+
+}
+
+async function courseinfo(CName,CCode,credits,CPointer,grades){
+    query = new Parse.Query("CourseInfo");
+    query.equalTo("Name", CName);
+    query.first().then(function(pet2){
+        if(pet2){
+            var Warray = pet2.get("WorkName");
+            var GWeight = pet2.get("GradeWeight");
+            var SemYr = pet2.get("SemesterYr");
+           console.log('Pet found successful with name: ' + CName+ " " + CCode + " " + credits + " " + SemYr);
+           var g = gradesfunc(grades,GWeight)
+           console.log(g + "IS THE PRICE")
+           render(CName,CCode,credits,g, SemYr)
+        } else {
+           console.log("Nothing found, please try again");
+        }
+    }).catch(function(error){
+        console.log("Error: " + error.code + " " + error.message);       
+    });
+}
+
+
+async function readCourses(Coursekey,grades) {
     query = new Parse.Query("Course");
     query.equalTo("objectId", Coursekey);
     query.first().then(function(pet1){
@@ -31,8 +68,10 @@ async function readCourses(Coursekey) {
             var CCode = pet1.get("CourseCode");
             var credits = pet1.get("Credits");
             var CPointer = pet1.get("CoursePointer");
+            const point = CPointer.objectId
+            console.log("RIGHT HERE" + CName)
            console.log('Pet found successful with name: ' + CName+ " " + CCode + " " + credits);
-           render(CName,CCode)
+           courseinfo(CName,CCode,credits,CPointer,grades)
         } else {
            console.log("Nothing found, please try again");
         }
@@ -54,7 +93,7 @@ async function read() {
            console.log(courses)
             console.log(coursesgrade)
             for (var i = 0; i < lenght; i++) {
-                readCourses(courses[i])
+                readCourses(courses[i],coursesgrade[i])
             }
         } else {
            console.log("Nothing found, please try again");
