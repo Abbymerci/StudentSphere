@@ -8,7 +8,7 @@ async function render(CName,CCode){
                         <div class="card card-chart">
                             <div class="card-header">
                                 <h5 class="card-category">${CName}</h5>
-                                <h4 class="card-title">Grades: ${CCode}</h4>
+                                <h4 class="card-title">Course: ${CCode}</h4>
                             </div>
                             <div class="card-body">
                                 <div class="card-footer">
