@@ -1,0 +1,41 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #c3c6c7;
+  }
+  
+  .container {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 50px;
+  }
+  
+  h1 {
+    font-size: 36px;
+    margin: 0;
+    padding: 0;
+  }
+  
+  p {
+    font-size: 18px;
+    margin-top: 10px;
+  }
+  
+  button {
+    font-size: 24px;
+    padding: 10px 20px;
+    margin-top: 20px;
+    background-color: #008CBA;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  #quote-container {
+    font-size: 24px;
+    margin-top: 20px;
+  }
+  
