@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Make Appointment</title>
+  <link rel="stylesheet" href="../assets/css/appointment.css">
+  <link rel="stylesheet" href="../assets/css/destress.css">
+</head>
+<header >
+    <nav>
+      <ul>
+        <li><a href="../examples/dashboard.html">Home</a></li>
+        <li><a href="../examples/destress.html">De-Stress</a></li>
+        <li><a href="../examples/event.html">Virtual Events</a></li>
+        <li><a href="../resources.html">Resources</a></li>
+        <li><a href="../contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+<body>
+<form id="appointment-form">
+    <h2>Make an Appointment</h2>
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+    </div>
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+    </div>
+    <div class="form-group">
+      <label for="phone">Phone:</label>
+      <input type="tel" id="phone" name="phone" required>
+    </div>
+    <div class="form-group">
+      <label for="date">Date:</label>
+      <input type="date" id="date" name="date" required>
+    </div>
+    <div class="form-group">
+      <label for="time">Time:</label>
+      <input type="time" id="time" name="time" required>
+    </div>
+    <div class="form-group">
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+    </div>
+    <button type="submit">Submit</button>
+  </form>
+  <script src="../assets/js/appointment.js"></script>
+</body>
+  
