@@ -1,3 +1,4 @@
+
 const quotes = [
     "In the midst of movement and chaos, keep stillness inside of you. - Deepak Chopra",
     "The greatest weapon against stress is our ability to choose one thought over another. - William James",
