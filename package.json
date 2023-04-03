@@ -1,7 +1,7 @@
 {
   "name": "now-ui-dashboard",
   "version": "1.0.1",
-  "description": "Now UI Dashboard a Premium Bootstrap 4 Now UI Design. Designed by Invision. Coded by Creative Tim.",
+  "description": "Now UI Dashboard a Premium Bootstrap 4 Now UI Design. Coded by Abisola & Efosa.",
   "main": "examples/dashboard.html",
   "directories": {
     "example": "root"
@@ -11,10 +11,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/creativetimofficial/now-ui-dashboard.git"
+    "url": "https://github.com/Abbymerci/StudentSphere"
   },
   "keywords": [
-    "creative tim",
+    "StudentSphere",
     "html dashboard",
     "html css dashboard",
     "web dashboard",
@@ -26,12 +26,12 @@
     "frontend",
     "responsive bootstrap 4 dashboard"
   ],
-  "author": "Creative Tim <hello@creative-tim.com> (https://www.creative-tim.com/)",
+  "author": "Abisola Arowolaju",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/creativetimofficial/now-ui-dashboard/issues"
+    "url": "https://github.com/Abbymerci/StudentSphere"
   },
-  "homepage": "http://creative-tim.com/product/material-kit-pro",
+  "homepage": "",
   "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^4.1.0",
